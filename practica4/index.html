@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ToroSentado · Botas Western</title>
+  <meta name="description" content="ToroSentado: Botas western artesanales. Compra modelos favoritos, descubre promociones y contáctanos." />
+
+  <!-- Fuentes / librerías -->
+  <link href="https://fonts.googleapis.com/css2?family=Rye&family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100" tabindex="0">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img src="img/logotorosentadohd.png" alt="ToroSentado" height="28" class="me-1" />
+        <span class="brand-mark">ToroSentado</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+          <li class="nav-item"><a class="nav-link" href="#llegados">Recién Llegados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item">
+            <button class="btn btn-outline-light position-relative" data-bs-toggle="modal" data-bs-target="#cartModal" aria-label="Ver carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner (usa img/portada-fb.jpg) -->
+  <section id="inicio" class="banner d-flex align-items-center">
+    <img src="img/portada-fb.jpg" alt="Banner ToroSentado" class="banner-img"
+         onerror="this.style.display='none';document.getElementById('banner-fallback').classList.remove('d-none');">
+    <div id="banner-fallback" class="container position-relative d-none">
+      <div class="banner-box text-center">
+        <span class="badge badge-west rounded-pill px-3 py-2 mb-3">Hecho a mano en México</span>
+        <h1 class="display-5 fw-bold mb-2">Botas western con alma de rancho</h1>
+        <p class="lead mb-4">Pieles selectas, puntadas precisas y confort que te acompaña del rancho a la ciudad.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="#menu" class="btn btn-cta btn-lg"><i class="fa-solid fa-cart-shopping me-2"></i>Comprar</a>
+          <a href="#llegados" class="btn btn-outline-light btn-lg rounded-pill"><i class="fa-solid fa-fire me-2"></i>Recién llegados</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Las favoritas -->
+    <section id="menu" class="py-5 py-lg-6">
+      <div class="container">
+        <h2 class="section-title h1"><i class="fa-solid fa-star"></i> Las favoritas</h2>
+        <p class="text-secondary mb-4">Nuestros modelos más pedidos. Elige tu talla y agrega al carrito.</p>
+
+        <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+          <!-- 1 -->
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/2R9A7933.jpg" class="card-img-top" alt="Bota Bordada Rojo (2R9A7933)" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Bota Bordada Rojo</h3>
+                <p class="text-secondary mb-2">Bordado floral y corte premium.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$2,399 MXN</span>
+                  <button class="btn btn-cta btn-sm add-to-cart"
+                          data-item="Bota Bordada Rojo" data-price="2399" data-image="img/2R9A7933.jpg">
+                    <i class="fa-solid fa-cart-plus me-2"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/2R9A7936.jpg" class="card-img-top" alt="Bota Doble Rojo (2R9A7936)" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Bota Doble Rojo</h3>
+                <p class="text-secondary mb-2">Caña alta con detalles artesanales.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$2,499 MXN</span>
+                  <button class="btn btn-cta btn-sm add-to-cart"
+                          data-item="Bota Doble Rojo" data-price="2499" data-image="img/2R9A7936.jpg">
+                    <i class="fa-solid fa-cart-plus me-2"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/2R9A7958.jpg" class="card-img-top" alt="Bota Café Clásica (2R9A7958)" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Bota Café Clásica</h3>
+                <p class="text-secondary mb-2">Estilo tradicional para el día a día.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$1,999 MXN</span>
+                  <button class="btn btn-cta btn-sm add-to-cart"
+                          data-item="Bota Café Clásica" data-price="1999" data-image="img/2R9A7958.jpg">
+                    <i class="fa-solid fa-cart-plus me-2"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/2R9A7967.jpg" class="card-img-top" alt="Bota Morada (2R9A7967)" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Bota Morada</h3>
+                <p class="text-secondary mb-2">Color audaz con bordado geométrico.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$2,299 MXN</span>
+                  <button class="btn btn-cta btn-sm add-to-cart"
+                          data-item="Bota Morada" data-price="2299" data-image="img/2R9A7967.jpg">
+                    <i class="fa-solid fa-cart-plus me-2"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/2R9A8659.jpg" class="card-img-top" alt="Bota Turquesa (2R9A8659)" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Bota Turquesa</h3>
+                <p class="text-secondary mb-2">Combinación vibrante y cómoda.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$2,199 MXN</span>
+                  <button class="btn btn-cta btn-sm add-to-cart"
+                          data-item="Bota Turquesa" data-price="2199" data-image="img/2R9A8659.jpg">
+                    <i class="fa-solid fa-cart-plus me-2"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 6 (tiene espacios en el nombre) -->
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/CLARA%20CAYETAN%20ROJO.jpg" class="card-img-top" alt="Clara Cayetan Rojo" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="h5">Clara Cayetan Rojo</h3>
+                <p class="text-secondary mb-2">Edición especial con piel seleccionada.</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <span class="price">$2,799 MXN</span>
+                  <button class="btn btn-cta btn-sm add-to-cart"
+                          data-item="Clara Cayetan Rojo" data-price="2799" data-image="img/CLARA%20CAYETAN%20ROJO.jpg">
+                    <i class="fa-solid fa-cart-plus me-2"></i>Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Recién Llegados -->
+    <section id="llegados" class="py-5 py-lg-6">
+      <div class="container">
+        <h2 class="section-title h1"><i class="fa-solid fa-fire"></i> Recién Llegados</h2>
+        <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-4">
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/CLARA%20CAYETAN%20TURQUESA.jpg" class="card-img-top" alt="Clara Cayetan Turquesa" />
+              <div class="card-body">
+                <h3 class="h6">Clara Cayetan Turquesa</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$2,849 MXN</span>
+                  <button class="btn btn-outline-light btn-sm rounded-pill add-to-cart"
+                          data-item="Clara Cayetan Turquesa" data-price="2849" data-image="img/CLARA%20CAYETAN%20TURQUESA.jpg">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/IMG_7036.jpg" class="card-img-top" alt="Modelo 7036" />
+              <div class="card-body">
+                <h3 class="h6">Modelo 7036</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$2,199 MXN</span>
+                  <button class="btn btn-outline-light btn-sm rounded-pill add-to-cart"
+                          data-item="Modelo 7036" data-price="2199" data-image="img/IMG_7036.jpg">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/IMG_7049.jpg" class="card-img-top" alt="Modelo 7049" />
+              <div class="card-body">
+                <h3 class="h6">Modelo 7049</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$2,249 MXN</span>
+                  <button class="btn btn-outline-light btn-sm rounded-pill add-to-cart"
+                          data-item="Modelo 7049" data-price="2249" data-image="img/IMG_7049.jpg">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card card-product h-100">
+              <img src="img/IMG_7051.jpg" class="card-img-top" alt="Modelo 7051" />
+              <div class="card-body">
+                <h3 class="h6">Modelo 7051</h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="price">$2,349 MXN</span>
+                  <button class="btn btn-outline-light btn-sm rounded-pill add-to-cart"
+                          data-item="Modelo 7051" data-price="2349" data-image="img/IMG_7051.jpg">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-5 py-lg-6">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h2 class="section-title h1"><i class="fa-solid fa-horse"></i> Nosotros</h2>
+            <p class="lead">Nacimos en un pequeño taller de León, Guanajuato.</p>
+            <p class="text-secondary">Combinamos técnicas artesanales con acabados modernos para crear botas que duran años. Cada par pasa por manos expertas: corte, armado, bordado y lustre.</p>
+            <div class="mt-3">
+              <a href="#contacto" class="btn btn-cta"><i class="fa-solid fa-envelope me-2"></i>Escríbenos</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img class="img-fluid about-img" src="img/IMG_7113.jpg" alt="Taller / sesión de botas" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5 py-lg-6">
+      <div class="container">
+        <h2 class="section-title h1"><i class="fa-solid fa-map-location-dot"></i> Contacto</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Tu nombre" required />
+                <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="tu@email.com" required />
+                <div class="invalid-feedback">Ingresa un email válido.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                <div class="invalid-feedback">Cuéntanos tu consulta.</div>
+              </div>
+              <button type="submit" class="btn btn-cta"><i class="fa-solid fa-paper-plane me-2"></i>Enviar</button>
+            </form>
+            <div class="divider"></div>
+            <p class="small text-secondary mb-0"><i class="fa-solid fa-clock me-2"></i><strong>Horarios:</strong> Lun–Sáb 10:00–20:00 · Dom 11:00–18:00</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="ratio ratio-4x3">
+              <iframe title="Mapa de ToroSentado" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Plaza+Garibaldi,+Ciudad+de+M%C3%A9xico&output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="mb-3">Enlaces rápidos</h5>
+          <ul class="list-unstyled m-0">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#llegados">Recién llegados</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3">Horarios de atención</h5>
+          <ul class="list-unstyled m-0 text-secondary">
+            <li>Lun–Sáb: 10:00 – 20:00</li>
+            <li>Domingo: 11:00 – 18:00</li>
+            <li>Atención en línea: 24/7</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="mb-3">Síguenos</h5>
+          <div class="d-flex gap-3 fs-4">
+            <a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a aria-label="X" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a aria-label="TikTok" href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+          <p class="small text-secondary mt-3 mb-0">© <span id="year"></span> ToroSentado. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel"><i class="fa-solid fa-cart-shopping me-2"></i>Tu Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="cartItems" class="list-group mb-3"></ul>
+          <div class="d-flex justify-content-between">
+            <strong>Total:</strong>
+            <span id="cartTotal">$0 MXN</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+          <button type="button" id="checkoutBtn" class="btn btn-cta">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast carrito -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index:1080">
+    <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="fa-solid fa-check me-2 text-success"></i>
+          <span id="toastMsg">Agregado al carrito.</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/scripts.js"></script>
+</body>
+</html>

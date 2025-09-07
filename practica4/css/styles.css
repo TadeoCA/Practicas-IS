@@ -1,0 +1,89 @@
+:root {
+  --ts-sand: #d2b48c;   /* paja */
+  --ts-red: #8b1e1e;    /* rojo oscuro */
+  --ts-black: #0e0e0e;
+}
+
+body{
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: #111;
+  color: #f8f9fa;
+  scroll-padding-top: 86px;
+}
+
+h1, h2, h3, .navbar-brand { font-family: "Cinzel", serif; letter-spacing: .5px; }
+.brand-mark { font-family: "Rye", cursive; letter-spacing: 1px; }
+
+.navbar{
+  background: rgba(14,14,14,.85);
+  backdrop-filter: saturate(120%) blur(6px);
+  border-bottom: 1px solid rgba(210,180,140,.25);
+}
+.navbar .nav-link{ font-weight:600; transition: color .2s ease; }
+.navbar .nav-link:hover{ color: var(--ts-sand); }
+
+/* Banner (imagen portada-fb) */
+.banner{
+  position: relative; min-height: 70vh; display: flex; align-items: center;
+  background: url("../img/portada-fb.jpg") center/cover no-repeat;
+}
+.banner::after{ content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.65)); }
+.banner .banner-box{
+  position: relative; z-index: 1; max-width: 900px; padding: 2rem;
+  background: rgba(14,14,14,.35); border:1px solid rgba(210,180,140,.25); border-radius: 18px;
+}
+
+/* Section headings */
+.section-title{
+  display:inline-flex; align-items:center; gap:.6rem;
+  border-bottom: 2px solid var(--ts-sand);
+  padding-bottom:.35rem; margin-bottom:1.5rem;
+}
+
+/* Cards */
+.card-product{
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(210,180,140,.25);
+  border-radius:16px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card-product:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 1.25rem 2rem rgba(0,0,0,.2);
+  border-color: var(--ts-sand);
+}
+.price{ color: var(--ts-sand); font-weight:700; }
+
+/* Promos */
+.promo{
+  background: linear-gradient(180deg, rgba(210,180,140,.12), rgba(210,180,140,.02));
+  border: 1px dashed rgba(210,180,140,.45);
+  border-radius:16px; padding:1.25rem; height:100%;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.promo:hover{ transform: translateY(-5px); box-shadow: 0 1rem 1.5rem rgba(0,0,0,.15); }
+
+/* Nosotros */
+.about-img{
+  border: 1px solid rgba(210,180,140,.35);
+  border-radius: 18px;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.25);
+}
+
+/* Botones */
+.btn-cta{
+  background: var(--ts-red); color:#fff; border-radius:999px;
+  transition: transform .18s ease, filter .18s ease;
+}
+.btn-cta:hover{ background:#a12323; transform: translateY(-1px) scale(1.02); filter: brightness(1.05); }
+
+/* Footer */
+footer{ background:#0b0a09; border-top: 1px solid rgba(210,180,140,.25); }
+footer a{ color:#d9c5a3; text-decoration:none; }
+footer a:hover{ color:#fff; text-decoration:underline; }
+
+.divider{ height:1px; background:rgba(210,180,140,.25); margin:1.25rem 0; }
+
+/* Badge carrito */
+#cartCount{ font-size:.7rem; padding:.25rem .45rem; }
