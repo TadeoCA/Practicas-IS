@@ -1,0 +1,58 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #0f1222;
+  background: #0b0e1a;
+}
+
+h1, h5, .navbar-brand { font-family: "Montserrat", sans-serif; }
+h2, p, a, li { font-family: "Lato", sans-serif; }
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #111428, #0d1022) !important;
+  border-bottom: 1px solid rgba(124,58,237,.25);
+}
+.navbar-brand { color: #e6e8f2 !important; }
+.navbar .nav-link { color: #9aa3b2 !important; transition: .2s; }
+.navbar .nav-link:hover,
+.navbar .nav-link.active { color: #e6e8f2 !important; }
+
+/* Botón */
+.btn.btn-outline-success {
+  color: #06b6d4;
+  border-color: #06b6d4;
+}
+.btn.btn-outline-success:hover {
+  background: #06b6d4;
+  color: #0b0e1a;
+}
+
+/* Carousel */
+.carousel .carousel-item img {
+  height: 72vh;
+  object-fit: cover;
+}
+.carousel-caption {
+  background: rgba(17,20,40,.6);
+  padding: 1.2rem;
+  border-radius: 1rem;
+}
+.carousel-caption h5 { color: #e6e8f2; font-weight: 800; }
+.carousel-caption p { color: #d6dbff; }
+.carousel-indicators [data-bs-target] { background-color: #06b6d4; }
+
+/* Footer */
+.footer-gradient {
+  background: linear-gradient(180deg, #111428, #0a0d1f);
+  color: #e6e8f2 !important;
+  border-top: 1px solid rgba(6,182,212,.25);
+}
+footer h5 { font-weight: 800; }
+footer p { color: #c2c8da; margin-bottom: .35rem; }
+.social-link:hover { color: #06b6d4 !important; }
+
+/* Responsive */
+@media (max-width: 576px) {
+  .carousel .carousel-item img { height: 56vh; }
+  .carousel-caption { padding: .75rem 1rem; }
+}

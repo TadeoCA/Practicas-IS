@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tadeo Castellanos | Servicios Digitales</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Íconos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
+  <!-- AOS Animaciones -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav data-aos="flip-up" class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold tracking-wide" href="#">Tadeo Castellanos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Servicios</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Landing Page</a></li>
+              <li><a class="dropdown-item" href="#">Sitio Web</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sistemas a medida</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link disabled">Marketing</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar...">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+  <div data-aos="fade-in" id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" class="d-block w-100" alt="Desarrollo web moderno">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Webs que convierten</h5>
+          <p>Diseño y desarrollo de sitios rápidos, accesibles y orientados a resultados.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop" class="d-block w-100" alt="Aplicaciones móviles">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Apps & Integraciones</h5>
+          <p>Aplicaciones móviles, PWA y automatizaciones para tu negocio digital.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1600&auto=format&fit=crop" class="d-block w-100" alt="Marketing digital y analítica">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Marketing & Analítica</h5>
+          <p>Campañas medibles, SEO técnico y analítica para crecer con datos.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer data-aos="fade-up" class="bg-dark text-white py-4 footer-gradient">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p>Tadeo Castellanos — Servicios Digitales</p>
+          <p>contacto@tadeocastellanos.dev</p>
+          <p>México</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Teléfonos</h5>
+          <p>Oficina: (+52) 55 0000 0000</p>
+          <p>Móvil: (+52) 55 0000 0001</p>
+          <p>WhatsApp: (+52) 55 0000 0002</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Redes Sociales</h5>
+          <p><a href="#" class="text-white social-link"><i class="bi bi-linkedin"></i> LinkedIn</a></p>
+          <p><a href="#" class="text-white social-link"><i class="bi bi-github"></i> GitHub</a></p>
+          <p><a href="#" class="text-white social-link"><i class="bi bi-instagram"></i> Instagram</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
