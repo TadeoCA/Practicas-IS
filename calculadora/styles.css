@@ -1,0 +1,202 @@
+
+
+:root{
+  --bg: #0b0f1a;
+  --card: rgba(255,255,255,0.10);
+  --glass: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.18);
+  --txt: #eaf0ff;
+  --muted: #9fb2ff;
+  --accent: #7aa2ff;
+  --accent-2: #7ef1c9;
+  --danger: #ff7a9a;
+  --shadow: 0 20px 50px rgba(0,0,0,0.45);
+  --radius: 22px;
+  --radius-sm: 14px;
+}
+
+*{box-sizing: border-box}
+
+html,body{
+  height:100%;
+}
+
+body{
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(1200px 600px at 20% 10%, #101735 0%, transparent 60%),
+    radial-gradient(1000px 800px at 80% 120%, #0b223f 0%, transparent 60%),
+    linear-gradient(180deg, #06080e, var(--bg));
+  color: var(--txt);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 32px 16px;
+}
+
+/* Contenedor general de la calculadora */
+.calculadora,
+.contenedor-calculadora{
+  width:min(420px, 100%);
+  background: var(--glass);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+/* Display */
+#display,
+.resultados,
+.display-calculadora{
+  width:100%;
+  height: 80px;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  color: var(--txt);
+  font-weight: 700;
+  font-size: clamp(20px, 5vw, 34px);
+  letter-spacing: 1px;
+  text-align: right;
+  outline: none;
+  box-shadow: inset 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* Tabla / layout de botones */
+.tabla-calculadora,
+.table-responsive{
+  width:100%;
+  margin-top: 16px;
+  border-collapse: separate;
+  border-spacing: 12px;
+}
+
+/* Botones genéricos */
+input[type="button"],
+.boton-numero,
+.boton-operador{
+  appearance: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  width: 100%;
+  min-width: 64px;
+  min-height: 56px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
+  color: var(--txt);
+  font-size: clamp(16px, 2.6vw, 22px);
+  font-weight: 600;
+  cursor: pointer;
+  
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+  user-select: none;
+}
+
+input[type="button"]:hover{
+  
+  
+}
+
+input[type="button"]:active{
+  
+  
+}
+
+/* Diferenciar tipos de botón si el HTML los marca con clases */
+.boton-numero{
+  background:
+    linear-gradient(180deg, rgba(126,241,201,0.18), rgba(126,241,201,0.05));
+  border-color: rgba(126,241,201,0.35);
+}
+
+.boton-operador{
+  background:
+    linear-gradient(180deg, rgba(122,162,255,0.20), rgba(122,162,255,0.06));
+  border-color: rgba(122,162,255,0.38);
+}
+
+/* Botón igual si existe por valor "=" o clase */
+input[type="button"][value="="],
+.boton-igual{
+  background:
+    linear-gradient(180deg, rgba(122,162,255,0.28), rgba(122,162,255,0.12));
+  border-color: rgba(122,162,255,0.55);
+  font-weight: 800;
+}
+
+/* Botón limpiar si está identificado por valor "C" o "AC" */
+input[type="button"][value="C"],
+input[type="button"][value="AC"],
+.boton-limpiar{
+  background:
+    linear-gradient(180deg, rgba(255,122,154,0.22), rgba(255,122,154,0.08));
+  border-color: rgba(255,122,154,0.46);
+}
+
+/* Celdas de la tabla para que los botones respiren */
+.tabla-calculadora td{
+  padding: 0;
+}
+
+/* Estado de foco para accesibilidad */
+input[type="button"]:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Etiquetas/ayudas si existen */
+label, .text-center{
+  color: var(--muted);
+}
+
+/* Responsivo */
+@media (max-width: 420px){
+  .calculadora,
+  .contenedor-calculadora{
+    padding: 14px;
+  }
+  #display,
+  .resultados,
+  .display-calculadora{
+    height: 70px;
+    font-size: 26px;
+  }
+  .tabla-calculadora{
+    border-spacing: 10px;
+  }
+  input[type="button"]{
+    min-height: 52px;
+    font-size: 18px;
+  }
+}
+
+/* Modo claro opcional: si el usuario prefiere light */
+@media (prefers-color-scheme: light){
+  :root{
+    --bg: #f0f4ff;
+    --card: rgba(255,255,255,0.7);
+    --glass: rgba(255,255,255,0.65);
+    --border: rgba(18, 20, 38, 0.12);
+    --txt: #121323;
+    --muted: #3a4779;
+    --accent: #315efb;
+    --accent-2: #0aa580;
+    --danger: #d22b55;
+    --shadow: 0 12px 38px rgba(16,30,60,0.15);
+  }
+  body{
+    background:
+      radial-gradient(1200px 600px at 15% 5%, #e5ecff 0%, transparent 60%),
+      radial-gradient(1000px 800px at 85% 120%, #dbe4ff 0%, transparent 60%),
+      linear-gradient(180deg, #f7f9ff, var(--bg));
+  }
+  #display{
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.06);
+  }
+}
