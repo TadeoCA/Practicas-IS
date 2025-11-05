@@ -1,6 +1,3 @@
-/* =========================
-   Paleta y base
-========================= */
 :root{
   --amarillo:#FFD23F;
   --rosa:#F75C7E;
@@ -13,203 +10,119 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
 body{
-  font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font-family:'Montserrat',sans-serif;
   color:var(--texto);
   background:#fff;
-  overflow-x:hidden; /* evita scroll lateral en decorativos */
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-img{max-width:100%;height:auto;display:block}
-/* Centrar el logo del header en menu.html */
-.logo-menu{
-  text-align: center;            /* asegura centrado del contenedor */
-}
-.logo-menu img{
-  display: inline-block;         /* vuelve a ser “inline” para que text-align funcione */
-  margin: 0 auto;                /* doble seguro de centrado */
-  height: 72px;                  /* tu tamaño original */
-}
-/* Centrar marca en navbar en móviles, mantener menú a la derecha en desktop */
-@media (max-width: 991.98px){
-  .navbar .navbar-brand{ margin: 0 auto; }
-}
-@media (min-width: 992px){
-  .navbar .navbar-collapse{ justify-content: end; }
+  overflow-x:hidden;
 }
 
-/* =========================
-   Marca y tipografía
-========================= */
-.brand-text{font-weight:800;letter-spacing:.3px}
-.titulo-seccion{font-weight:800;letter-spacing:.2px;margin-bottom:.5rem}
+/* Marca y utilidades */
+.brand-text{font-weight:800}
+.titulo-seccion{font-weight:800;letter-spacing:.2px}
 .txt-acento{color:var(--rosa)}
 .bg-claro{background:var(--crema)}
-
-/* =========================
-   Hero
-========================= */
-.hero{
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(1200px 600px at 80% 10%, #ffe7ef 0%, #fff 60%),
-    linear-gradient(0deg, var(--crema), #fff);
-}
-.hero-img{max-width:520px;border-radius:22px}
-.hero .lead{max-width:52ch}
-
-/* =========================
-   Botones
-========================= */
-.btn-amarillo{
-  background:var(--amarillo);border:none;font-weight:700;
-  box-shadow:0 6px 20px rgba(255,210,63,.35);
-}
-.btn-amarillo:hover{filter:brightness(.95)}
-.btn-rosa{
-  background:var(--rosa);color:#fff;border:none;font-weight:700;
-  box-shadow:0 6px 20px rgba(247,92,126,.35);
-}
-.btn-rosa:hover{color:#fff;filter:brightness(.95)}
-.btn-outline-rosa{
-  border:2px solid var(--rosa);color:var(--rosa);font-weight:700;
-}
-.btn-outline-rosa:hover{background:var(--rosa);color:#fff}
-.btn-success{
-  background-color:#27c469!important;border:none!important;font-weight:700;
-  box-shadow:0 6px 20px rgba(39,196,105,.35);
-}
-.btn-success:hover{filter:brightness(.9)}
-
-/* =========================
-   Tarjetas e imágenes
-========================= */
 .rounded-4{border-radius:1.2rem!important}
 .shadow-md{box-shadow:var(--shadow-md)}
-.shadow-sm-custom{box-shadow:var(--shadow-sm)}
+.lista-check{list-style:none;padding-left:0}
+.lista-check li{margin:.4rem 0}
+.lista-check li::before{content:"✓";color:var(--rosa);margin-right:.5rem}
 
-.hover-float{
-  transition:transform .3s ease, box-shadow .3s ease, filter .3s ease;
-  will-change:transform;
-}
-.hover-float:hover{
-  transform:translateY(-8px);
-  box-shadow:0 16px 30px rgba(0,0,0,.15);
-}
+/* Botones */
+.btn-amarillo{background:var(--amarillo);border:none;font-weight:700}
+.btn-rosa{background:var(--rosa);color:#fff;border:none;font-weight:700}
+.btn-outline-rosa{border:2px solid var(--rosa);color:var(--rosa);font-weight:700}
+.btn-outline-rosa:hover{background:var(--rosa);color:#fff}
+.btn-success{background-color:#27c469!important;border:none!important;font-weight:700}
 
-/* =========================
-   Decorativos laterales
-========================= */
-.decor{
-  position:absolute; width:220px; opacity:.9; z-index:1;
-  --y: 0; --r: 0deg; --s: 1; /* variables para animación */
-  transform: translateY(var(--y)) rotate(var(--r)) scale(var(--s));
-  transition: transform .4s ease, opacity .3s ease;
-  will-change: transform;
-  filter: drop-shadow(0 12px 24px rgba(0,0,0,.12));
-}
-.decor-left{left:-80px; bottom:40px; --r:-8deg}
-.decor-right{right:-80px; top:40px;  --r: 6deg}
-.floating{animation:floating 6s ease-in-out infinite}
-@keyframes floating{
-  0%,100%{ transform: translateY(0) rotate(var(--r)) scale(var(--s)); }
-  50%    { transform: translateY(-12px) rotate(var(--r)) scale(var(--s)); }
-}
-.decor:hover{ --s:1.05; --r:0deg; }
+/* Hero */
+.hero{background:radial-gradient(1200px 600px at 80% 10%,#ffe7ef 0%,#fff 60%)}
+.hero-img{max-width:520px;border-radius:22px}
 
-/* =========================
-   Listas
-========================= */
-.lista-check{padding-left:0;list-style:none;margin:0}
-.lista-check li{padding-left:28px;position:relative;margin:.5rem 0}
-.lista-check li::before{
-  content:"✓"; color:var(--rosa);
-  position:absolute; left:0; top:0; font-weight:800
+/* ---------- LATERALES DECORATIVOS ---------- */
+.page-decor{pointer-events:none}
+.side-left,.side-right{position:fixed;top:0;height:100vh;z-index:0;opacity:.95}
+
+/* Izquierda: izquierda.png repitiendo vertical */
+@media (min-width:992px){
+  .side-left{
+    left:0;width:74px;
+    background:url("../src/izquierda.png") left top / 74px auto repeat-y;
+  }
+  body.has-sides .gutter-wrap{padding-left:90px}
+}
+@media (min-width:1200px){
+  .side-left{width:88px;background-size:88px auto}
+  body.has-sides .gutter-wrap{padding-left:104px}
 }
 
-/* =========================
-   Página de Menú
-========================= */
-.logo-menu img{height:72px}
+/* Derecha: platillo PNG transparente flotante */
+@media (min-width:992px){
+  .side-right{
+    right:0;width:min(32vw,420px);height:100vh;background:none;
+  }
+  .side-right::before{
+    content:"";position:absolute;inset:0;
+    background:url("../src/IMG_6367.png") center right / contain no-repeat;
+    opacity:.9;transform:translateX(10%);
+  }
+  .side-right::after{
+    content:"";position:absolute;inset:0;
+   
+  }
+  body.has-sides .gutter-wrap{
+    padding-right:min(34vw,420px);
+  }
+}
+
+/* Ocultar laterales en móvil */
+@media (max-width:991.98px){
+  .side-left,.side-right{display:none}
+}
+
+/* Asegurar que el contenido esté por encima */
+body>*:not(.page-decor){position:relative;z-index:1}
+
+/* ---------- MENÚ ---------- */
+.logo-menu{text-align:center}
+.logo-menu img{display:inline-block;margin:0 auto;height:72px}
+
 .content{max-width:1000px;margin:0 auto;padding:2rem 1rem}
-
 .menu-section h2{
-  font-weight:800; color:var(--rosa);
+  font-weight:800;color:var(--rosa);
   border-bottom:4px solid var(--amarillo);
-  display:inline-block; padding-bottom:.25rem; margin:1.5rem 0 .75rem;
+  display:inline-block;margin:1.5rem 0 .75rem
 }
 
 .menu-item{
-  display:flex; gap:1rem; align-items:flex-start;
-  padding:1rem; border-radius:16px; background:#fff;
-  box-shadow:var(--shadow-sm); margin:.75rem 0;
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.1rem 1.2rem;border-radius:16px;background:#fff;
+  box-shadow:var(--shadow-sm);margin:.75rem 0
 }
-.menu-text .menu-title{font-weight:800;letter-spacing:.4px}
-.price{color:var(--marron); margin-left:.5rem}
+.menu-text .menu-title{font-weight:800}
+.price{color:var(--marron)}
 
-@media (max-width: 576px){
+/* Icono ↔ Foto real */
+.photo-swap{
+  position:relative;width:100px;height:100px;flex:0 0 100px;
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 8px 18px rgba(0,0,0,.08);background:#fff
+}
+.photo-swap img{position:absolute;inset:0;width:100%;height:100%;transition:opacity .35s ease,transform .35s ease}
+.thumb-icon{object-fit:contain;padding:10px;background:#fff}
+.thumb-real{object-fit:cover;opacity:0;transform:scale(1.05)}
+.menu-item:hover .thumb-real{opacity:1;transform:scale(1)}
+.menu-item:hover .thumb-icon{opacity:0}
+.photo-swap.show-real .thumb-real{opacity:1;transform:scale(1)}
+.photo-swap.show-real .thumb-icon{opacity:0}
+
+@media(max-width:576px){
   .menu-item{flex-direction:column;align-items:flex-start}
+  .photo-swap{width:92px;height:92px;flex-basis:92px}
 }
 
 /* Botón volver */
 .volver-btn{
-  display:inline-block; margin:2rem auto 4rem; background:var(--amarillo); color:#000;
-  padding:.8rem 1.2rem; border-radius:12px; text-decoration:none; font-weight:700
+  background:var(--amarillo);color:#000;padding:.8rem 1.2rem;
+  border-radius:12px;text-decoration:none;font-weight:700
 }
-
-/* =========================
-   Efecto icono → foto (photo-swap)
-========================= */
-/* ====== Efecto icono → foto (actualizado para no cortar PNG) ====== */
-.photo-swap{
-  position:relative;
-  width:92px; height:92px; flex:0 0 92px;
-  border-radius:14px; overflow:hidden;
-  box-shadow:0 8px 18px rgba(0,0,0,.08);
-  background:#fff; /* fondo para transparencias del PNG */
-}
-
-/* Ambos en posición absoluta para el fade */
-.photo-swap .thumb-icon,
-.photo-swap .thumb-real{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  transition:opacity .35s ease, transform .35s ease;
-}
-
-/* ICONO: que no se recorte */
-.photo-swap .thumb-icon{
-  object-fit: contain;          /* <- CLAVE: no cortar */
-  object-position: center;
-  padding:10px;                 /* margen interno para respirar */
-  background:#fff;              /* por si el PNG tiene transparencia */
-}
-
-/* FOTO REAL: que sí llene el cuadro */
-.photo-swap .thumb-real{
-  object-fit: cover;
-  object-position: center;
-  opacity:0; transform:scale(1.05);
-}
-
-/* Hover en desktop */
-.menu-item:hover .photo-swap .thumb-real{ opacity:1; transform:scale(1) }
-.menu-item:hover .photo-swap .thumb-icon{ opacity:0 }
-
-/* Toggle en móvil (la clase la agrega main.js) */
-.photo-swap.show-real .thumb-real{ opacity:1; transform:scale(1) }
-.photo-swap.show-real .thumb-icon{ opacity:0 }
-
-/* Tamaño responsive */
-@media (max-width: 576px){
-  .photo-swap{ width:82px; height:82px; }
-}
-
-/* Utilidades para casos especiales */
-.icon-pad-sm  .thumb-icon{ padding:6px; }
-.icon-pad-lg  .thumb-icon{ padding:14px; }
-.icon-wide    .thumb-icon{ object-position:center; }  /* “muy anchos” */
-.icon-tall    .thumb-icon{ object-position:center; }  /* “muy altos” */
